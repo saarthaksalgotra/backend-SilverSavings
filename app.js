@@ -23,15 +23,15 @@ app.get('/', (req, res) => res.send("HELLO"));
 // Your API routes here (e.g., /register, /login, etc.)
 
 // Deployment Configuration
-const __dirname = path.resolve(); // Use a single __dirname variable
+const __dirname1 = path.resolve(); // Use a single __dirname variable
 
 if (process.env.NODE_ENV === "production") {
   // Serve static files from the build folder during production
-  app.use(express.static(path.join(__dirname, "SilverSaving-frontend/build")));
+  app.use(express.static(path.join(__dirname1, "SilverSaving-frontend/build")));
 
   // Handle all unmatched routes (serves index.html)
   app.get("*", (req, res) => {
-    res.sendFile(path.resolve(__dirname, "SilverSaving-frontend", "build", "index.html"));
+    res.sendFile(path.resolve(__dirname1, "SilverSaving-frontend", "build", "index.html"));
   });
 } else {
   app.get("/", (req, res) => {
