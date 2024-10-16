@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 const { User } = require('./models/User.js')
 const { Expense } = require('./models/Expense.js'); 
 const cors = require('cors'); 
-
+const path = require('path');
 mongoose.connect(process.env.MONGO_URL); 
 const app = express(); 
 app.use(cors({
